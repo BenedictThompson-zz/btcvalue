@@ -1,6 +1,5 @@
-<snippet>
-  <content><![CDATA[
-# ${1:BTCvalue}
+
+# BTCvalue
 A twitter bot that will post the current price of bitcoin along with a graph every 30 mins.
 ## Installation
 ### Requirements:
@@ -13,8 +12,3 @@ To install this simply edit the 'XXXXXX' to your own keys.
 Run the file.
 It is recommened that this is ran on a computer seperate to your own such as a VPS in order for it to be ran 24 hours per day
 
-## Credits
-TODO: Write credits
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
