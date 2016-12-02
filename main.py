@@ -19,7 +19,7 @@ while True:
     btcprice = str(CoinDesk().get_current_price())
     btcchange = str(coinmarketcap.cap_change_24h('bitcoin'))
     fn = os.path.abspath("price.gif")
-    status = ("The bitcoin price is " + btcprice + ". With a change over the last 24h of " + btcchange + ". #Bitcoin #Price")
+    status = ("The bitcoin price is $" + btcprice + ". With a change over the last 24h of " + btcchange + ". #Bitcoin #Price")
     api.update_with_media(fn, status=status)
     time.sleep(1800)
 
