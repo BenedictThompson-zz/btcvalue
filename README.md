@@ -4,8 +4,8 @@ A twitter bot that will post the current price of bitcoin along with a graph eve
 ## Installation
 ### Requirements:
 [lxml](https://pypi.python.org/pypi/lxml/3.2.3#downloads), 
-[coinmarketcap](https://pypi.python.org/pypi/lxml/3.2.3#downloads), 
-[bitcoin-price-api](https://pypi.python.org/pypi/lxml/3.2.3#downloads) and 
+[coinmarketcap](https://pypi.python.org/pypi/coinmarketcap/), 
+[bitcoin-price-api](https://pypi.python.org/pypi/bitcoin-price-api/0.0.4s) and 
 [tweepy](http://www.tweepy.org/)
 
 To install this simply edit the 'XXXXXX' to your own keys.
