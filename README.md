@@ -12,4 +12,5 @@ To install this simply edit the 'XXXXXX' to your own keys.
 ## Usage
 Run the file.
 It is recommened that this is ran on a computer seperate to your own such as a VPS in order for it to be ran 24 hours per day
-
+## License
+btcvalue uses the MIT license. See [LICENSE](https://github.com/benthompson2001/btcvalue/blob/master/LICENSE) for more details.
