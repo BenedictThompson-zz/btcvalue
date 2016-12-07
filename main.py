@@ -102,7 +102,7 @@ def imagemod():
     if bitcoinpricelist[0] < bitcoinpricelist[143]:
         img4 = Image.open("positive.png")
     else:
-    img4 = Image.open("negative.png")
+        img4 = Image.open("negative.png")
     img3.paste(img4, (65,55), img4)
     draw = ImageDraw.Draw(img3)
     draw.text((105, 53),"1.9",(255,255,255),font=font)
