@@ -99,9 +99,9 @@ def imagemod():
     draw.text((95, 20),str(bitcoinprice),(255,255,255),font=font)
     draw = ImageDraw.Draw(img3)
     draw = ImageDraw.Draw(img3)
-    #if bitcoinpricelist[0] < bitcoinpricelist[143]:
-        #img4 = Image.open("positive.png")
-    #else:
+    if bitcoinpricelist[0] < bitcoinpricelist[143]:
+        img4 = Image.open("positive.png")
+    else:
     img4 = Image.open("negative.png")
     img3.paste(img4, (65,55), img4)
     draw = ImageDraw.Draw(img3)
