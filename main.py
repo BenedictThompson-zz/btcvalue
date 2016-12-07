@@ -110,6 +110,6 @@ def imagemod():
     draw = ImageDraw.Draw(img3)
     img3.save("finished.png")
   
-    
+
 Thread(target = getbtcprice).start()
 Thread(target = onceready).start()
