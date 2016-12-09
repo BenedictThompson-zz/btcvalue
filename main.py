@@ -100,13 +100,14 @@ def imagemod():
     draw.text((95, 20),str(bitcoinprice),(255,255,255),font=font)
     draw = ImageDraw.Draw(img3)
     draw = ImageDraw.Draw(img3)
-    #if bitcoinpricelist[0] < bitcoinpricelist[143]:
-        #img4 = Image.open("positive.png")
-    #else:
-    img4 = Image.open("negative.png")
+    bitcoinchange = coinmarketcap.cap_change_24h('bitcoin')
+    if bitcoinchange > 0:
+        img4 = Image.open("positive.png")
+    else:
+        img4 = Image.open("negative.png")
     img3.paste(img4, (65,55), img4)
     draw = ImageDraw.Draw(img3)
-    draw.text((105, 53),"1.9",(255,255,255),font=font)
+    draw.text((105, 53),str(bitcoinchange),(255,255,255),font=font)
     draw = ImageDraw.Draw(img3)
     draw = ImageDraw.Draw(img3)
     img3.save("finished.png")
