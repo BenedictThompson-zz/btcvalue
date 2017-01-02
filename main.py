@@ -8,15 +8,17 @@ import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
 import tweepy
 import os
+import locale
 import coinmarketcap
+import decimal
 
 import PIL
 from exchanges.coindesk import CoinDesk
 from PIL import Image
-ACCESS_KEY = 'XXXXXX'
-ACCESS_SECRET = 'XXXXXX'
-CONSUMER_KEY = 'XXXXXX'
-CONSUMER_SECRET = 'XXXXXX'
+ACCESS_KEY = 'XXXXX'
+ACCESS_SECRET = 'XXXXX'
+CONSUMER_KEY = 'XXXXX'
+CONSUMER_SECRET = 'XXXXX'
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.secure = True
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
@@ -54,7 +56,10 @@ def creategraph():
 def getbtcprice():
     while True:
             global bitcoinpricelist
-            bitcoinprice = CoinDesk().get_current_price()
+            bitcoinprice = coinmarketcap.price('bitcoin')
+            bitcoinprice = str(bitcoinprice)
+            bitcoinprice = bitcoinprice.replace('$', '')
+            bitcoinprice = bitcoinprice.replace(',', '')
             bitcoinpricelist.append(float(bitcoinprice))
             time.sleep(300)
             if len(bitcoinpricelist) < 288:
